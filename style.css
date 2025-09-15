@@ -16,6 +16,7 @@
 .tasks > div {
     display: flex;
     flex-direction: column;
+    padding: 8px 0px;
     text-align: center;
     align-items: center;
     flex: 1 1 calc(25% - 5px);
