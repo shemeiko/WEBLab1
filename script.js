@@ -76,7 +76,7 @@ function task11() {
 function task12() {
     let str = "abcde"
 
-    alert(str[0] + str[1] + str[2] + str[3] + str[4])
+    alert(str[0] + str[2] + str[4])
 }
 
 function task13() {
