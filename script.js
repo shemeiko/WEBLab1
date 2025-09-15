@@ -52,12 +52,11 @@ function task7() {
 function task8() {
     let name = "Тарас"
 
-    alert(`${str} ${name}`)
+    alert(`Привіт, ${name}!`)
 }
 
 function task9() {
     let age = 20
-
 
     alert(`Мені ${age} років!`)
 }
