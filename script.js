@@ -83,7 +83,6 @@ function task13() {
     let num = "12345"
 
     alert(num[0] * num[1] * num[2] * num[3] * num[4])
-
 }
 
 function daysInMonth(month, year) {
@@ -119,7 +118,7 @@ function calculateSeconds(dateTo) {
     let b = diffMs > 0
 
     const seconds = Math.floor(Math.abs(diffMs) / 1000);
-    document.getElementById("result").innerText = `${seconds} seconds ${b ? "left" : "pass"}.`
+    document.getElementById("result").innerText = `${seconds} seconds ${b ? "left" : "passed"}.`
 }
 
 function task15() {
