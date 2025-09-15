@@ -92,15 +92,18 @@ function daysInMonth(month, year) {
 }
 
 function task14() {
+    const input = document.getElementById('input-date')
+    if (input) return
     const d = document.getElementById("dateTo")
-    const input = document.createElement('input')
-    input.type = 'date'
+    const newInput = document.createElement('input')
+    newInput.type = 'date'
+    newInput.id = 'input-date'
 
     const button = document.createElement('button')    
     button.innerText = "calculate"
-    button.onclick = () => calculateSeconds(input.value)
+    button.onclick = () => calculateSeconds(newInput.value)
 
-    d.appendChild(input)
+    d.appendChild(newInput)
     d.appendChild(button)
 }
 
@@ -110,6 +113,7 @@ function calculateSeconds(dateTo) {
         return
     }
 
+    const dElem = document.getElementById('dateTo')
     const [year, month, day] = dateTo.split('-').map(Number)
     const date = new Date(year, month-1, day)
     const now = new Date()
@@ -117,8 +121,11 @@ function calculateSeconds(dateTo) {
     const diffMs = (date-now)
     let b = diffMs > 0
 
-    const seconds = Math.floor(Math.abs(diffMs) / 1000);
-    document.getElementById("result").innerText = `${seconds} seconds ${b ? "left" : "passed"}.`
+    const seconds = Math.floor(Math.abs(diffMs) / 1000)
+    let res = dElem.querySelector('p')
+    if (!res) res = document.createElement('p')
+    res.innerHTML = `${seconds} seconds ${b ? "left" : "passed"}.`
+    dElem.appendChild(res)
 }
 
 function task15() {
